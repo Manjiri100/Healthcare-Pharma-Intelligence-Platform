@@ -1,0 +1,7 @@
+site_id,site_name,country,trial_id,planned_patients,active_patients
+S001,London Research Centre,United Kingdom,TR001,20,3
+S002,Birmingham Clinical Unit,United Kingdom,TR001,18,2
+S003,Manchester Oncology Centre,United Kingdom,TR002,25,2
+S004,Leeds Research Hospital,United Kingdom,TR002,20,1
+S005,Bristol Neuro Centre,United Kingdom,TR003,22,2
+S006,Coventry Research Unit,United Kingdom,TR003,18,1

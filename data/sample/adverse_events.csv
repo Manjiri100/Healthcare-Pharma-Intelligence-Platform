@@ -1,0 +1,11 @@
+event_id,patient_id,trial_id,site_id,event_date,event_type,severity,outcome
+AE001,PT001,TR001,S001,2025-02-21,Headache,Mild,Recovered
+AE002,PT002,TR001,S002,2025-02-26,Nausea,Mild,Recovered
+AE003,PT003,TR002,S003,2025-03-13,Fatigue,Moderate,Ongoing
+AE004,PT004,TR002,S004,2025-03-19,Rash,Mild,Recovered
+AE005,PT005,TR003,S005,2025-03-26,Dizziness,Moderate,Recovered
+AE006,PT006,TR003,S006,2025-03-28,Headache,Mild,Recovered
+AE007,PT008,TR004,S002,2025-04-13,Fever,Moderate,Ongoing
+AE008,PT009,TR001,S001,2025-04-18,Nausea,Mild,Recovered
+AE009,PT010,TR002,S003,2025-04-20,Fatigue,Severe,Hospitalised
+AE010,PT011,TR003,S005,2025-04-28,Dizziness,Mild,Recovered

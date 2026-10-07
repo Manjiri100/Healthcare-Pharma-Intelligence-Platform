@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: dim_patient
+  - name: dim_trial
+  - name: dim_site
+  - name: fct_visit
+  - name: fct_adverse_event
+  - name: dq_exceptions

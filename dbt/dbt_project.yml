@@ -1,0 +1,10 @@
+name: healthcare_pharma_intelligence
+version: '1.0.0'
+config-version: 2
+profile: healthcare_pharma_intelligence
+model-paths: ['models']
+models:
+  healthcare_pharma_intelligence:
+    staging: {+materialized: view}
+    intermediate: {+materialized: view}
+    marts: {+materialized: table}

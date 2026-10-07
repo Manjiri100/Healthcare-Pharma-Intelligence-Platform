@@ -1,0 +1,13 @@
+patient_id,patient_name,age,sex,trial_id,site_id,enrolment_date,status
+PT001,Aarav Shah,54,M,TR001,S001,2025-01-12,Active
+PT002,Emily Carter,47,F,TR001,S002,2025-01-18,Active
+PT003,Noah Williams,61,M,TR002,S003,2025-02-03,Active
+PT004,Sofia Martin,39,F,TR002,S004,2025-02-10,Completed
+PT005,Daniel Brown,58,M,TR003,S005,2025-02-15,Active
+PT006,Amelia Wilson,45,F,TR003,S006,2025-02-20,Active
+PT007,Oliver Smith,67,M,TR004,S001,2025-03-01,Completed
+PT008,Mia Jones,52,F,TR004,S002,2025-03-04,Active
+PT009,Ethan Taylor,49,M,TR001,S001,2025-03-10,Active
+PT010,Grace Evans,43,F,TR002,S003,2025-03-12,Active
+PT011,Liam Thomas,72,M,TR003,S005,2025-03-20,Withdrawn
+PT011,Liam Thomas,72,M,TR003,S005,2025-03-20,Withdrawn

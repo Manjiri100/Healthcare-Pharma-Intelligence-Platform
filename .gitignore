@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+data/generated/
+*.duckdb
+
+# Enterprise-scale generated healthcare data
+data/generated/

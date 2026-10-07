@@ -1,0 +1,5 @@
+trial_id,trial_name,phase,therapeutic_area,start_date,target_end_date,status
+TR001,CardioNova,Phase III,Cardiology,2025-01-01,2025-12-31,Recruiting
+TR002,OncoBridge,Phase II,Oncology,2025-01-15,2025-11-30,Recruiting
+TR003,NeuroPath,Phase III,Neurology,2025-02-01,2026-01-31,Active
+TR004,Immunexia,Phase II,Immunology,2025-02-15,2025-10-31,Active

@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: healthcare
+    schema: data
+    tables:
+      - name: patients
+      - name: clinical_trials
+      - name: sites
+      - name: visits
+      - name: adverse_events
