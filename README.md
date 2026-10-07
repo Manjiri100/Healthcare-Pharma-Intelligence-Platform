@@ -1,66 +1,234 @@
 # 🧬 Healthcare & Pharma Intelligence Platform
 
-> **Enterprise-scale synthetic portfolio environment: 1M+ operational records.**
+> **Enterprise-scale synthetic healthcare & pharma analytics environment with 1M+ operational records.**
 
-## About the Project
+---
 
-A synthetic healthcare and pharmaceutical analytics project built around a practical business question:
+## 🎯 About the Project
 
-> **How can healthcare and pharma teams identify operational bottlenecks, trial performance issues, patient follow-up risks and data-quality problems from fragmented operational data?**
+A synthetic healthcare and pharmaceutical analytics platform built around a practical business question:
 
-The project follows a business-first workflow:
+> **How can healthcare and pharma teams turn fragmented operational data into trustworthy insights for clinical operations, trial performance, patient follow-up and data-quality management?**
 
-**Source Data → Profiling → Data Quality → Investigation → Transformation → Business Insights → Decision Support**
+The project follows a **business-first analytics workflow**:
 
-## Project Overview
+**Source Data → Profiling → Data Quality → Investigation → Transformation → Analytical Marts → Decision Support**
 
-The sample environment combines five operational datasets: Patients, Clinical Trials, Trial Sites, Patient Visits and Adverse Events.
+All datasets are synthetic and created specifically for portfolio demonstration.
 
-The project investigates trial performance, site performance, patient follow-up, adverse-event patterns and data-quality issues.
+---
 
-## Sample Data Environment
+## 🏢 Enterprise-Scale Data Environment
 
-| Dataset | Records |
-|---|---:|
-| Patients | 12 |
-| Clinical Trials | 4 |
-| Trial Sites | 6 |
-| Visits | 30 |
-| Adverse Events | 10 |
+The platform is designed to simulate a large operational healthcare/pharma environment:
 
-All data is synthetic and created only for portfolio demonstration.
+| Dataset                | Synthetic Records |
+| ---------------------- | ----------------: |
+| Patients               |        **50,000** |
+| Clinical Trials        |            **25** |
+| Trial Sites            |           **150** |
+| Patient Visits         |     **1,000,000** |
+| Adverse Events         |       **100,000** |
+| **Total Core Records** |        **1.15M+** |
 
-## Analytical Workflow
+The visit data is generated in partitions to demonstrate how the project can work with larger datasets rather than relying only on small sample files.
+
+### Scale Strategy
 
 ```text
-Operational Sources → Profiling → Data Quality → SQL Investigation
-                                      ↓
-                                dbt Transformation
-                                      ↓
-                             Analytical Marts
-                                      ↓
-                              Decision Support
+Small Test Data
+      ↓
+10K Records
+      ↓
+100K Records
+      ↓
+1M+ Operational Records
+      ↓
+Partitioned Data
+      ↓
+SQL / dbt Transformation
+      ↓
+Analytical Marts
+      ↓
+Power BI-Ready Reporting Layer
 ```
 
-## SQL Investigations
+The large datasets are **generated locally through Python** rather than committed to GitHub, keeping the repository lightweight while allowing the project to demonstrate enterprise-scale data-generation and processing patterns.
 
-- Trial performance
-- Site performance
-- Patient visit completion
-- Adverse-event monitoring
-- Data-quality checks
+---
 
-## Python
+## 🔎 Business Problems Investigated
 
-Lightweight profiling for row counts, missing values and duplicate identifiers.
+The platform investigates several healthcare and pharma operational questions:
 
-## dbt Transformation Layer
+### 1. Clinical Trial Performance
 
-**Raw Sources → Staging → Intermediate → Analytical Marts**
+* Which trials are progressing as expected?
+* Where are operational delays appearing?
+* Which trials require further investigation?
 
-Core models include `dim_patient`, `dim_trial`, `dim_site`, `fct_visit`, `fct_adverse_event` and `dq_exceptions`.
+### 2. Trial Site Performance
 
-## Business Investigation Tickets
+* Which sites have unusual visit patterns?
+* Are some sites generating higher operational exceptions?
+* Where could site-level follow-up be required?
+
+### 3. Patient Follow-Up
+
+* Are expected patient visits being completed?
+* Where are follow-up gaps occurring?
+* Which records require operational investigation?
+
+### 4. Adverse-Event Monitoring
+
+* What patterns exist across adverse-event records?
+* Which trials or sites require additional investigation?
+* Are there data-quality anomalies affecting reporting?
+
+### 5. Data Quality & Governance
+
+* Are identifiers duplicated?
+* Are required fields missing?
+* Are relationships between operational datasets valid?
+* Can analytical outputs be trusted?
+
+---
+
+## 🏗️ Analytical Architecture
+
+```text
+Synthetic Operational Sources
+            ↓
+       Python Generator
+            ↓
+      Data Profiling
+            ↓
+     Data Quality Checks
+            ↓
+       SQL Investigation
+            ↓
+     dbt Transformation
+            ↓
+   Staging → Intermediate
+            ↓
+      Analytical Marts
+            ↓
+ Power BI-Ready Reporting Layer
+            ↓
+     Business Decision Support
+```
+
+---
+
+## 🧪 Data Generation
+
+The project includes a scalable Python generator capable of creating large synthetic healthcare/pharma datasets.
+
+Default enterprise-scale environment:
+
+```text
+50,000 patients
+25 clinical trials
+150 trial sites
+1,000,000 patient visits
+100,000 adverse events
+```
+
+Example command:
+
+```bash
+python generator/generate_healthcare_data.py \
+  --output data/generated \
+  --patients 50000 \
+  --trials 25 \
+  --sites 150 \
+  --visits 1000000 \
+  --adverse-events 100000
+```
+
+The generator uses deterministic seeds so that the environment can be reproduced consistently.
+
+Generated enterprise-scale data is intentionally excluded from GitHub through `.gitignore`.
+
+---
+
+## 🧹 Data Quality
+
+The project treats data quality as part of the analytical workflow rather than an afterthought.
+
+Checks include:
+
+* Missing values
+* Duplicate identifiers
+* Referential integrity
+* Invalid relationships
+* Unexpected records
+* Data completeness
+* Operational exceptions
+
+The project also includes dedicated data-quality investigation queries and a `dq_exceptions` analytical model.
+
+---
+
+## 🧮 SQL Investigations
+
+SQL is used to investigate:
+
+* Trial performance
+* Site performance
+* Patient visit completion
+* Adverse-event patterns
+* Data-quality exceptions
+* Operational KPIs
+* Cross-table relationships
+
+The SQL layer is structured around business questions rather than isolated technical queries.
+
+---
+
+## 🐍 Python
+
+Python is used for:
+
+* Synthetic enterprise-scale data generation
+* Dataset profiling
+* Row-count validation
+* Missing-value analysis
+* Duplicate detection
+* Reproducible test environments
+
+---
+
+## 🔄 dbt Transformation Layer
+
+The project follows a layered transformation approach:
+
+```text
+Raw Sources
+     ↓
+Staging
+     ↓
+Intermediate
+     ↓
+Analytical Marts
+```
+
+Core analytical models include:
+
+* `dim_patient`
+* `dim_trial`
+* `dim_site`
+* `fct_visit`
+* `fct_adverse_event`
+* `dq_exceptions`
+
+This creates a structured analytical layer suitable for downstream BI and reporting.
+
+---
+
+## 🎫 Business Investigation Tickets
+
+The repository contains business-style investigation tickets covering:
 
 1. Trial performance
 2. Site performance
@@ -68,30 +236,85 @@ Core models include `dim_patient`, `dim_trial`, `dim_site`, `fct_visit`, `fct_ad
 4. Adverse events
 5. Data quality
 
-## Skills Demonstrated
+Each ticket is designed around a business question, investigation approach and expected analytical outcome.
 
-SQL • Python • Data Profiling • Data Quality • dbt • Healthcare Analytics • Pharma / Clinical Operations Analytics • Business Investigation • KPI Development • Data Governance
+---
 
-## Repository Structure
+## 📊 Power BI-Ready Analytics
+
+The analytical marts are designed as a **Power BI-ready reporting layer** for exploring:
+
+* Trial KPIs
+* Site performance
+* Patient follow-up
+* Visit completion
+* Adverse-event patterns
+* Data-quality exceptions
+
+The project focuses on creating a reliable analytical foundation before visualization.
+
+---
+
+## 🧪 Testing
+
+The repository includes automated tests covering the project and enterprise-scale data generator.
+
+Run:
+
+```bash
+python -m pytest
+```
+
+---
+
+## 🛠️ Skills Demonstrated
+
+**SQL** • **Python** • **Power BI-Ready Analytics** • **dbt** • **Data Profiling** • **Data Quality** • **Healthcare Analytics** • **Pharma Analytics** • **Clinical Operations Analytics** • **KPI Development** • **Data Governance** • **Synthetic Data Generation** • **Large-Scale Data Processing**
+
+---
+
+## 📁 Repository Structure
 
 ```text
 Healthcare-Pharma-Intelligence-Platform/
+├── .github/
+│   └── workflows/
 ├── business-tickets/
-├── data/sample/
+├── data/
+│   └── sample/
 ├── dbt/
 ├── docs/
+├── generator/
 ├── python/
 ├── sql/
 ├── tests/
-└── README.md
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
+
+---
 
 ## 📊 Project Preview
 
 ![Healthcare & Pharma Intelligence Platform](docs/project-preview.svg)
 
-> Synthetic portfolio project demonstrating healthcare and pharma operational analytics using SQL, Python, dbt and data-quality controls.
+> **Synthetic portfolio project demonstrating enterprise-scale healthcare and pharma operational analytics using SQL, Python, dbt, data-quality controls and Power BI-ready analytical marts.**
 
-## Important Note
+---
 
-All data is synthetic. This project contains no real patient information and is not clinical evidence or medical advice.
+## ⚠️ Important Note
+
+All data in this repository is **synthetic**.
+
+The project contains:
+
+* No real patient information
+* No real clinical-trial participant information
+* No confidential healthcare data
+* No real-world clinical evidence
+
+The enterprise-scale record counts demonstrate **technical design and data-engineering capability**, not prior employment data volumes or production clinical data.
+
+This project is intended solely as a portfolio demonstration and is **not clinical evidence or medical advice**.
